@@ -1,7 +1,7 @@
 from typing import Optional, Iterable, Any
 
-from functions.api_call import api_call, ConnectionToBitrixError
-from functions.exceptions import BitrixApiError, ExpiredToken
+from .api_call import api_call, ConnectionToBitrixError
+from .exceptions import BitrixApiError, ExpiredToken
 
 
 class BaseBitrixToken:
