@@ -226,7 +226,7 @@ def convert_params(form_data):
             # Кодируется только вложенная часть ключа,
             # т.к. внешняя бывает только при рекурсивном вызове и уже
             # может содержать квадратные скобки, которые мы хотим сохранить
-            inner_key = urllib.parse.quote(force_str(inner_key))
+            inner_key = urllib.parse.quote(str(inner_key))
 
             if key is not None:
                 inner_key = u'%s[%s]' % (key, inner_key)
