@@ -1,5 +1,5 @@
-from functions.api_call import DEFAULT_TIMEOUT
-from functions.batch_api_call import BatchResultDict
+from .api_call import DEFAULT_TIMEOUT
+from .batch_api_call import BatchResultDict
 
 ALLOWABLE_TIME = 2000
 MICROSECONDS_TO_MILLISECONDS = 1000

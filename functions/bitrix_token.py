@@ -49,7 +49,7 @@ class BaseBitrixToken:
     def batch_api_call(self, methods, timeout=DEFAULT_TIMEOUT, chunk_size=50, halt=0, log_prefix=''):
         """:rtype: bitrix_utils.bitrix_auth.functions.batch_api_call3.BatchResultDict
         """
-        from functions.batch_api_call import _batch_api_call
+        from .batch_api_call import _batch_api_call
         return _batch_api_call(methods=methods,
                                bitrix_user_token=self,
                                function_calling_from_bitrix_user_token_think_before_use=True,
@@ -76,7 +76,7 @@ class BaseBitrixToken:
         Если происходит KeyError, надо добавить описание метода
         в справочники METHOD_TO_* в bitrix_utils.bitrix_auth.functions.call_list_fast
         """
-        from functions.call_list_fast import call_list_fast
+        from .call_list_fast import call_list_fast
         return call_list_fast(self, method, params, descending=descending,
                               limit=limit, batch_size=batch_size,
                               timeout=timeout, log_prefix=log_prefix)
