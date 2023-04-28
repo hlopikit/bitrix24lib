@@ -92,7 +92,7 @@ class BaseBitrixToken:
             log_prefix='',  # type: str
             batch_size=50,  # type: int
     ):  # type: (...) -> list
-        from functions.call_list_method import call_list_method
+        from .call_list_method import call_list_method
         result = call_list_method(self, method, fields=fields,
                                        limit=limit,
                                        allowable_error=allowable_error,
